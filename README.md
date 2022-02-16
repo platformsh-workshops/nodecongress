@@ -60,5 +60,5 @@ At any time during the conference feel free to message our team for more informa
 
 ## Get started
 
-If you've completed all of the [*Before the workshop*](#before-the-workshop) steps above, feel free to move onto the [Introduction](docs/_instructions.md).
+If you've completed all of the [*Before the workshop*](#before-the-workshop) steps above, feel free to move onto the [**Workshop Instructions**](docs/_instructions.md).
 

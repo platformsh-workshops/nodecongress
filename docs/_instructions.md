@@ -7,6 +7,8 @@ Before going any further, make sure that you have
 - [Installed the Platform.sh CLI](https://docs.platform.sh/development/cli.html)
 - [Created a free trial account](https://auth.api.platform.sh/register)
 
+## Setting up
+
 1. `platform login`
 1. `git clone https://github.com/platformsh-workshops/nodecongress.git`
 1. `cd nodecongress`
