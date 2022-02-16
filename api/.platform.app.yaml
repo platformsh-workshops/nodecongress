@@ -24,6 +24,8 @@ hooks:
     # Download dependencies and build Strapi.
     yarn --frozen-lockfile
     yarn build
+    ln -s env/.env .env
+
 
 # The relationships of the application with services or other applications.
 # The left-hand side is the name of the relationship as it will be exposed
@@ -53,6 +55,11 @@ mounts:
     source_path: app
 
   # Mount database folder for strapi
+  "data":
+    source: local
+    source_path: data
+
+  # Mount database folder for strapi
   "database":
     source: local
     source_path: database
@@ -61,6 +68,10 @@ mounts:
   "extensions":
     source: local
     source_path: extensions
+  
+  "env":
+    source: local
+    source_path: env
 
   # Allow for media uploads at runtime.
   "public/uploads":
