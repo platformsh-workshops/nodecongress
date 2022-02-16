@@ -25,7 +25,7 @@ Before going any further, make sure that you have
 1. `yarn seed`
 1. `yarn develop`
 1. Use the following credentials to set up an admin account (you can change after the workshop):
-    - First: `Node Congress`
+    - First: `Node`
     - Second: `Workshop`
     - Email: `admin@example.com`
     - Pass: `Admin1234`
@@ -45,9 +45,10 @@ Before going any further, make sure that you have
 1. `git commit -m "Init commit."`
 1. `git push platform main`
 1. Wait for the deployment to complete.
+1. Visit the deployment and re-register the admin user.
 1. `cd api`
-1. `platform mount:upload --mount .tmp --source .tmp`
 1. `platform mount:upload --mount public/uploads --source public/uploads`
+1. `platform mount:upload --mount .tmp --source .tmp`
 1. Verify the deployment
 
 ## Switching services
