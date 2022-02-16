@@ -19,6 +19,7 @@ Before going any further, make sure that you have
 1. Navigating the `api` codebase
 1. `cd api`
 1. `yarn --frozen-lockfile`
+    - **Tip:** For OSX, it may be necessary to first run `export SHARP_IGNORE_GLOBAL_LIBVIPS=true` if you get a `sharp` or `node-gyp` error at this point.
 1. `yarn seed`
 1. `yarn develop`
 1. Use the following credentials to set up an admin account (you can change after the workshop):
