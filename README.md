@@ -9,7 +9,7 @@
     <img style="width: 200px;" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/899069a8-ac49-491f-b2d2-791b27799699/Logo.WhiteBackground.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220216T120245Z&X-Amz-Expires=86400&X-Amz-Signature=f9452e6e4fbfee9e9e2bb593d34614d6cb291c1d8c1cdc3a407e15442bf34696&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Logo.WhiteBackground.svg%22&x-id=GetObject" />
   </a>
 
-  <h2 align="center">Deploying a decoupled restaurant review site to production with Strapi and Platform.sh</h2>
+  <h2 align="center">Deploying a decoupled restaurant review site<br/>with Strapi and Platform.sh</h2>
 </p>
 <br/><br/>
 
