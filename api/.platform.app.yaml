@@ -24,7 +24,7 @@ hooks:
     # Download dependencies and build Strapi.
     yarn --frozen-lockfile
     yarn build
-    ln -s env/.env .env
+    # ln -s env/.env .env
 
 
 # The relationships of the application with services or other applications.
