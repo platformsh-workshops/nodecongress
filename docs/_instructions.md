@@ -36,6 +36,7 @@ Before going any further, make sure that you have
 1. The management console
 1. Environment variables
 1. Configuration files
+1. 
 1. The CLI
 
 ## Deploying the project
@@ -44,6 +45,7 @@ Before going any further, make sure that you have
 1. `git commit -m "Init commit."`
 1. `git push platform main`
 1. Wait for the deployment to complete.
+1. `cd api`
 1. `platform mount:upload --mount .tmp --source .tmp`
 1. `platform mount:upload --mount public/uploads --source public/uploads`
 1. Verify the deployment
