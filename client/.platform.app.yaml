@@ -24,12 +24,12 @@ hooks:
     build: |
         # 1. Build dependencies.
         set -e
-        # yarn global add pm2
         yarn --frozen-lockfile
-        
-        rm .env.development
+
+        # rm .env.development
         ln -s env/.env .env
         chmod +x update-env.sh
+
     deploy: |
         ./update-env.sh
     post_deploy: |
