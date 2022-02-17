@@ -27,7 +27,7 @@ hooks:
         yarn --frozen-lockfile
 
         cp .env.init .env
-        chmod +x update-env.sh
+        # chmod +x update-env.sh
 
     post_deploy: |
         # 3. Rebuild now that the backend is available.
