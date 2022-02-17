@@ -26,17 +26,13 @@ hooks:
         set -e
         yarn --frozen-lockfile
 
-        # cp .env.init .env
-        # chmod +x update-env.sh
-
     post_deploy: |
         # 3. Rebuild now that the backend is available.
-        # . update-env.sh
         yarn build
 web:
     commands:
         start: |
-            # 2. Build the site and start the pm2 process.
+            # 2. Build the site and start the pm2 process, watching for changes brought by post_deploy.
             yarn build
             pm2 start npm --no-daemon --watch --name "foodadvisor-client" -- start -- -p $PORT
 disk: 512
@@ -48,7 +44,3 @@ mounts:
     /.pm2:
         source: local
         source_path: 'next'
-
-    # env:
-    #     source: local
-    #     source_path: 'env'
