@@ -50,3 +50,6 @@ mounts:
     /.pm2:
         source: local
         source_path: 'next'
+    env:
+        source: local
+        source_path: 'env'
