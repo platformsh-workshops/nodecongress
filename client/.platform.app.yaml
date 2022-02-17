@@ -26,21 +26,17 @@ hooks:
         set -e
         yarn --frozen-lockfile
 
-        # ln -s env/.env .env
+        cp .env.init .env
         chmod +x update-env.sh
 
-    deploy: |
-        . update-env.sh
-
     post_deploy: |
-        # 3. Rebuild and restart the pm2 process, now with the available backend api.
+        # 3. Rebuild now that the backend is available.
+        . update-env.sh
         yarn build
 web:
     commands:
         start: |
-            # 2. Build and start the pm2 process, using the default http://localhost:1337 as backend API.
-            NEXT_PUBLIC_API_URL=http://localhost:1337
-            PREVIEW_SECRET=mysecret
+            # 2. Build the site and start the pm2 process.
             yarn build
             pm2 start npm --no-daemon --watch --name "foodadvisor-client" -- start -- -p $PORT
 disk: 512
