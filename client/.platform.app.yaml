@@ -34,7 +34,8 @@ web:
         start: |
             # 2. Build the site and start the pm2 process, watching for changes brought by post_deploy.
             yarn build
-            pm2 start npm --no-daemon --watch --name "foodadvisor-client" -- start -- -p $PORT
+            APP=$(cat package.json | jq -r '.name')
+            pm2 start npm --no-daemon --watch --name $APP -- start -- -p $PORT
 disk: 512
 
 mounts:
