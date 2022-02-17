@@ -5,6 +5,7 @@ type: 'nodejs:14'
 dependencies:
     nodejs:
         yarn: "1.22.17"
+        pm2: "5.2.0"
 
 build:
     flavor: none
@@ -23,8 +24,9 @@ hooks:
     build: |
         # 1. Build dependencies.
         set -e
-        yarn global add pm2
+        # yarn global add pm2
         yarn --frozen-lockfile
+        
         rm .env.development
         ln -s env/.env .env
         chmod +x update-env.sh
@@ -33,7 +35,6 @@ hooks:
     post_deploy: |
         # 3. Rebuild and restart the pm2 process, now with the available backend api.
         yarn build
-        # pm2 restart foodadvisor-client --update-env
 web:
     commands:
         start: |
@@ -42,7 +43,6 @@ web:
             printf "PREVIEW_SECRET=mysecret" >> .env
             yarn build
             pm2 start npm --no-daemon --watch --name "foodadvisor-client" -- start -- -p $PORT
-            # pm2 start yarn --interpreter bash --no-daemon --name "foodadvisor-client" -- start -p $PORT
 disk: 512
 
 mounts:
