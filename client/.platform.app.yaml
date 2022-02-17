@@ -23,7 +23,7 @@ resources:
 hooks:
     build: |
         # 1. Build dependencies.
-        set -euox pipefail
+        set -e
         yarn --frozen-lockfile
 
         # ln -s env/.env .env
