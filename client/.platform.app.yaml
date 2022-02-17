@@ -4,8 +4,7 @@ type: 'nodejs:14'
 
 dependencies:
     nodejs:
-        yarn: "^1.22.0"
-        pm2: "*"
+        yarn: "1.22.17"
 
 build:
     flavor: none
@@ -24,6 +23,7 @@ hooks:
     build: |
         # 1. Build dependencies.
         set -e
+        yarn global add pm2
         yarn --frozen-lockfile
         rm .env.development
         ln -s env/.env .env
