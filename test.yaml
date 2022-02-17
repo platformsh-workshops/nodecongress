@@ -38,7 +38,7 @@ web:
         start: |
             # 2. Build and start the pm2 process, using the default http://localhost:1337 as backend API.
             yarn build
-            pm2 start yarn --interpreter bash --name "foodadvisor-client" -- start --no-daemon -- -p $PORT
+            pm2 start npm --name "foodadvisor-client" -- start -p $PORT
 
 disk: 512
 
