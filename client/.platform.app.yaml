@@ -46,3 +46,6 @@ mounts:
     /.next:
         source: local
         source_path: 'next'
+    /.pm2:
+        source: local
+        source_path: 'next'
