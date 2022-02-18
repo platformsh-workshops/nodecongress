@@ -19,5 +19,6 @@
 
 "https://{default}/":
     type: upstream
+    primary: true
     upstream: "nextjs:http"
     id: "client"
