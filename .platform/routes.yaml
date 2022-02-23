@@ -11,3 +11,14 @@
     type: upstream
     upstream: "strapi:http"
     id: "api"
+
+    
+"https://www.{default}/":
+    type: redirect
+    to: "https://{default}/"
+
+"https://{default}/":
+    type: upstream
+    primary: true
+    upstream: "nextjs:http"
+    id: "client"
